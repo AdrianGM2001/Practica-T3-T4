@@ -1,11 +1,9 @@
 import java.util.Locale;
 import java.util.Scanner;
-import javax.swing.JOptionPane;
 
 public class PersonaApp_Scanner {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        sc.useDelimiter("\n");
         sc.useLocale(Locale.US);
 
         //Introducimos los datos
@@ -34,12 +32,15 @@ public class PersonaApp_Scanner {
         
         System.out.println("Persona1");
         MuestraMensajePeso(persona1);
+        MuestraMayorEdad(persona1);
         System.out.println(persona1.toString());
         System.out.println("Persona2");
         MuestraMensajePeso(persona2);
+        MuestraMayorEdad(persona2);
         System.out.println(persona2.toString());
         System.out.println("Persona3");
         MuestraMensajePeso(persona3);
+        MuestraMayorEdad(persona3);
         System.out.println(persona3.toString());
     }
 
@@ -56,6 +57,14 @@ public class PersonaApp_Scanner {
             case Persona.SOBREPESO:
                 System.out.println("La persona esta por encima de su peso ideal");
                 break;
+        }
+    }
+
+    public static void MuestraMayorEdad(Persona p) {
+        if (p.getEdad() >= 18) {
+            System.out.println("Es mayor de edad");
+        } else {
+            System.out.println("Es menor de edad");
         }
     }
 }

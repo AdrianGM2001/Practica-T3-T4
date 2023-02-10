@@ -57,6 +57,10 @@ public class Persona {
         this.edad = edad;
     }
 
+    public int getEdad() {
+        return this.edad;
+    }
+
     public void setSexo(char sexo) {
         this.sexo = sexo;
     }
